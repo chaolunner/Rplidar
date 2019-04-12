@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61af3fe583e9f9e45acaf8c920448827, type: 3}
+  m_Name: InteractiveWall
+  m_EditorClassIdentifier: 
+  BuildTarget: 19
+  BuildDirectory: Builds/
+  Scenes:
+  - SceneName: MainScene
+    ScenePath: Assets/Scenes/MainScene.unity
+  StreamingAssetDirectories:
+  - ProjectPathConfigurations
+  - InteractiveWallConfigurations
+  - AVProVideoSamples
