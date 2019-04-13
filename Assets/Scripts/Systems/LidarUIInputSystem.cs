@@ -32,6 +32,8 @@ public class LidarUIInputSystem : SystemBehaviour
             var xMultiplier = Display.displays[lidarUIInputComponent.TargetDisplay < Display.displays.Length ? lidarUIInputComponent.TargetDisplay : 0].renderingWidth / lidarUIInputComponent.Size.x;
             var yMultiplier = Display.displays[lidarUIInputComponent.TargetDisplay < Display.displays.Length ? lidarUIInputComponent.TargetDisplay : 0].renderingHeight / lidarUIInputComponent.Size.y;
 
+            viewComponent.Transforms[0].parent.rotation = lidarUIInputComponent.Rotation;
+
             Observable.EveryLateUpdate().Where(_ => lidarUIInputComponent.LidarInput2D.IsDraw).Subscribe(_ =>
             {
                 while (scopes.Count > 0)
@@ -46,7 +48,7 @@ public class LidarUIInputSystem : SystemBehaviour
                 var scope = Instantiate(lidarUIInputComponent.LiderInputScopePrefab, viewComponent.Transforms[0]);
                 var rectTransform = scope.transform as RectTransform;
                 var center = 0.5f * (min + max);
-                scope.transform.position = new Vector3((center.x + lidarUIInputComponent.Offset.x) * xMultiplier, (center.y + lidarUIInputComponent.Offset.y) * yMultiplier, 0);
+                scope.transform.localPosition = new Vector3((center.x + lidarUIInputComponent.Offset.x) * xMultiplier, (center.y + lidarUIInputComponent.Offset.y) * yMultiplier, 0);
                 rectTransform.sizeDelta = new Vector2((max.x - min.x) * xMultiplier, (max.y - min.y) * yMultiplier);
                 scopes.Add(scope);
 
@@ -60,14 +62,14 @@ public class LidarUIInputSystem : SystemBehaviour
                 {
                     var go = Instantiate(lidarUIInputComponent.LidarUIPointPrefab, viewComponent.Transforms[0]);
 
-                    go.transform.position = new Vector3((position.x + lidarUIInputComponent.Offset.x) * xMultiplier, (position.y + lidarUIInputComponent.Offset.y) * yMultiplier, 0);
+                    go.transform.localPosition = new Vector3((position.x + lidarUIInputComponent.Offset.x) * xMultiplier, (position.y + lidarUIInputComponent.Offset.y) * yMultiplier, 0);
                     points.Add(go);
                 }
                 foreach (var kvp in lidarUIInputComponent.LidarInput2D.TrackedObjects)
                 {
                     var go = Instantiate(lidarUIInputComponent.LidarUIPointPrefab, viewComponent.Transforms[0]);
 
-                    go.transform.position = new Vector3((kvp.Key.x + lidarUIInputComponent.Offset.x) * xMultiplier, (kvp.Key.y + lidarUIInputComponent.Offset.y) * yMultiplier, 0);
+                    go.transform.localPosition = new Vector3((kvp.Key.x + lidarUIInputComponent.Offset.x) * xMultiplier, (kvp.Key.y + lidarUIInputComponent.Offset.y) * yMultiplier, 0);
                     go.GetComponent<Image>().color = Color.red;
                     points.Add(go);
                 }

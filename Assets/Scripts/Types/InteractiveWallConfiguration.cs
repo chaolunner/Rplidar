@@ -22,6 +22,7 @@ public struct AreaConfiguration
     public string LidarHost;
     public int LidarPort;
     public Vector2 LidarPosition;
+    public Vector3 LidarRotation;
     public float LidarInputMinX;
     public float LidarInputMinY;
     public float LidarInputMaxX;

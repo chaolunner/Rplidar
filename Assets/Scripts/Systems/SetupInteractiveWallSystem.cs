@@ -43,6 +43,7 @@ public class SetupInteractiveWallSystem : SystemBehaviour
                 var config = Configuration.Areas[lidarUIInputComponent.ID];
                 lidarUIInputComponent.Size = config.WallSize;
                 lidarUIInputComponent.Offset = config.LidarPosition;
+                lidarUIInputComponent.Rotation = Quaternion.Euler(config.LidarRotation);
                 lidarUIInputComponent.LidarInput2D.IsDraw = config.EnableLidarMap;
                 lidarUIInputComponent.LidarInput2D.Client.Host = config.LidarHost;
                 lidarUIInputComponent.LidarInput2D.Client.Port = config.LidarPort;

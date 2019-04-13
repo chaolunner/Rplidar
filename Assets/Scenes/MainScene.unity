@@ -363,6 +363,42 @@ MonoBehaviour:
     overridePath: 0
     pathLocation: 2
     path: 
+--- !u!1 &119811555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119811556}
+  m_Layer: 5
+  m_Name: LidarUIInputPivotDisplay1A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &119811556
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119811555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 858298979}
+  m_Father: {fileID: 665739266}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &141756743
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +590,7 @@ GameObject:
   - component: {fileID: 203580836}
   - component: {fileID: 203580838}
   - component: {fileID: 203580837}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay1APart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +667,7 @@ GameObject:
   - component: {fileID: 212233629}
   - component: {fileID: 212233631}
   - component: {fileID: 212233630}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay1BPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +749,7 @@ GameObject:
   - component: {fileID: 237121577}
   - component: {fileID: 237121576}
   - component: {fileID: 237121575}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +933,7 @@ GameObject:
   - component: {fileID: 246228893}
   - component: {fileID: 246228895}
   - component: {fileID: 246228894}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay2BPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +1010,7 @@ GameObject:
   - component: {fileID: 267566415}
   - component: {fileID: 267566417}
   - component: {fileID: 267566416}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay1APart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1220,7 +1256,7 @@ GameObject:
   - component: {fileID: 371751179}
   - component: {fileID: 371751178}
   - component: {fileID: 371751177}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1440,7 @@ GameObject:
   - component: {fileID: 390972586}
   - component: {fileID: 390972588}
   - component: {fileID: 390972587}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay1APart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,7 +1517,7 @@ GameObject:
   - component: {fileID: 408096132}
   - component: {fileID: 408096134}
   - component: {fileID: 408096133}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay1BPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2101,7 +2137,7 @@ GameObject:
   - component: {fileID: 569922521}
   - component: {fileID: 569922526}
   - component: {fileID: 569922527}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay2A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2438,6 +2474,42 @@ MonoBehaviour:
     overridePath: 0
     pathLocation: 2
     path: 
+--- !u!1 &605410969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 605410970}
+  m_Layer: 5
+  m_Name: LidarUIInputPivotDisplay1B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &605410970
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605410969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1866697605}
+  m_Father: {fileID: 665739266}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &641446814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,7 +2521,7 @@ GameObject:
   - component: {fileID: 641446815}
   - component: {fileID: 641446817}
   - component: {fileID: 641446816}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay2APart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2526,7 +2598,7 @@ GameObject:
   - component: {fileID: 665739266}
   - component: {fileID: 665739269}
   - component: {fileID: 665739268}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CanvasDisplay1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2548,8 +2620,8 @@ RectTransform:
   - {fileID: 912647151}
   - {fileID: 237121574}
   - {fileID: 1640168174}
-  - {fileID: 858298979}
-  - {fileID: 1866697605}
+  - {fileID: 119811556}
+  - {fileID: 605410970}
   m_Father: {fileID: 1838233516}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2644,7 +2716,7 @@ GameObject:
   - component: {fileID: 760931761}
   - component: {fileID: 760931763}
   - component: {fileID: 760931762}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay2BPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3114,7 +3186,7 @@ GameObject:
   - component: {fileID: 858298982}
   - component: {fileID: 858298981}
   - component: {fileID: 858298980}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LidarUIInputDisplay1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3128,18 +3200,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858298978}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 665739266}
-  m_RootOrder: 4
+  m_Father: {fileID: 119811556}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &858298980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3367,7 +3439,7 @@ GameObject:
   - component: {fileID: 912647152}
   - component: {fileID: 912647157}
   - component: {fileID: 912647158}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay1B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3551,7 +3623,7 @@ GameObject:
   - component: {fileID: 947016012}
   - component: {fileID: 947016014}
   - component: {fileID: 947016013}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CanvasDisplay2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3573,8 +3645,8 @@ RectTransform:
   - {fileID: 1658417655}
   - {fileID: 2066406456}
   - {fileID: 371751176}
-  - {fileID: 1884582371}
-  - {fileID: 1100931301}
+  - {fileID: 1537230555}
+  - {fileID: 1930186490}
   m_Father: {fileID: 1838233516}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3801,7 +3873,7 @@ GameObject:
   - component: {fileID: 998567581}
   - component: {fileID: 998567583}
   - component: {fileID: 998567582}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay1BPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3879,7 +3951,7 @@ GameObject:
   - component: {fileID: 1100931304}
   - component: {fileID: 1100931303}
   - component: {fileID: 1100931302}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LidarUIInputDisplay2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3897,14 +3969,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 947016012}
-  m_RootOrder: 5
+  m_Father: {fileID: 1930186490}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1100931302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3963,7 +4035,7 @@ GameObject:
   - component: {fileID: 1115627083}
   - component: {fileID: 1115627085}
   - component: {fileID: 1115627084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay2APart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4234,7 +4306,7 @@ GameObject:
   - component: {fileID: 1297577025}
   - component: {fileID: 1297577027}
   - component: {fileID: 1297577026}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay1BPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5178,6 +5250,42 @@ MonoBehaviour:
     overridePath: 0
     pathLocation: 2
     path: 
+--- !u!1 &1537230554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537230555}
+  m_Layer: 5
+  m_Name: LidarUIInputPivotDisplay2A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1537230555
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537230554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1884582371}
+  m_Father: {fileID: 947016012}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1547757436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,7 +5492,7 @@ GameObject:
   - component: {fileID: 1640168177}
   - component: {fileID: 1640168176}
   - component: {fileID: 1640168175}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay1B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5605,7 +5713,7 @@ GameObject:
   - component: {fileID: 1658417656}
   - component: {fileID: 1658417661}
   - component: {fileID: 1658417662}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay2B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5983,7 +6091,7 @@ GameObject:
   - component: {fileID: 1687127319}
   - component: {fileID: 1687127321}
   - component: {fileID: 1687127320}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay2BPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6060,7 +6168,7 @@ GameObject:
   - component: {fileID: 1727619835}
   - component: {fileID: 1727619837}
   - component: {fileID: 1727619836}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay2APart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6137,7 +6245,7 @@ GameObject:
   - component: {fileID: 1733620984}
   - component: {fileID: 1733620986}
   - component: {fileID: 1733620985}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay2BPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6219,7 +6327,7 @@ GameObject:
   - component: {fileID: 1771030483}
   - component: {fileID: 1771030484}
   - component: {fileID: 1771030485}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6567,7 +6675,7 @@ GameObject:
   - component: {fileID: 1866697608}
   - component: {fileID: 1866697607}
   - component: {fileID: 1866697606}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LidarUIInputDisplay1B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6581,18 +6689,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866697604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 665739266}
-  m_RootOrder: 5
+  m_Father: {fileID: 605410970}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1866697606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6695,7 +6803,7 @@ GameObject:
   - component: {fileID: 1884582374}
   - component: {fileID: 1884582373}
   - component: {fileID: 1884582372}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LidarUIInputDisplay2A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6713,14 +6821,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 947016012}
-  m_RootOrder: 4
+  m_Father: {fileID: 1537230555}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1884582372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6800,6 +6908,42 @@ Transform:
   m_Father: {fileID: 1817139179}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1930186489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930186490}
+  m_Layer: 5
+  m_Name: LidarUIInputPivotDisplay2B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1930186490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930186489}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1100931301}
+  m_Father: {fileID: 947016012}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1953013681
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,7 +6955,7 @@ GameObject:
   - component: {fileID: 1953013682}
   - component: {fileID: 1953013684}
   - component: {fileID: 1953013683}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VideoUIDisplay2APart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6888,7 +7032,7 @@ GameObject:
   - component: {fileID: 2000439411}
   - component: {fileID: 2000439413}
   - component: {fileID: 2000439412}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay1APart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7134,7 +7278,7 @@ GameObject:
   - component: {fileID: 2066406459}
   - component: {fileID: 2066406458}
   - component: {fileID: 2066406457}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextUIDisplay2A
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,4 +10,5 @@ public class LidarUIInputComponent : ComponentBehaviour
     public GameObject LiderInputScopePrefab;
     public Vector2 Size;
     public Vector2 Offset;
+    public Quaternion Rotation;
 }
