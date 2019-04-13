@@ -110,10 +110,6 @@ public class LidarUIInputSystem : SystemBehaviour
     {
         foreach (var input in lidarUIInputComponents.Entities.Select(e => e.GetComponent<LidarUIInputComponent>()).Where(input => input.LidarInput2D == lidarInput2D))
         {
-            if (dis == Vector2.zero)
-            {
-                continue;
-            }
             if (Mathf.Abs(dis.x) > Mathf.Abs(dis.y))
             {
                 EventSystem.Publish(new LidarSwipeEvent(input.ID, go, pos, new Vector2(dis.x / Mathf.Abs(dis.x), 0)));

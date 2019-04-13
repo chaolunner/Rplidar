@@ -22,7 +22,8 @@ public class LidarInput2D : MonoBehaviour
     public float MaxX = 6f;
     public float MinY = -6f;
     public float MaxY = 6f;
-    public float MaxDistance = 0.1f;
+    public float MinDistance = 0.05f;
+    public float MaxDistance = 0.25f;
 
     public float XMultiplier = 1f;
     public float YMultiplier = 1f;
@@ -190,7 +191,11 @@ public class LidarInput2D : MonoBehaviour
                 trackedObject.ID = i;
                 TrackedObjects.Remove(previousBlob);
                 TrackedObjects.Add(Blobs[i], go);
-                OnDrag(this, go, Blobs[i], Blobs[i] - previousBlob);
+                var distance = Blobs[i] - previousBlob;
+                if (distance.magnitude >= MinDistance)
+                {
+                    OnDrag(this, go, Blobs[i], distance);
+                }
             }
         }
 

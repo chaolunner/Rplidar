@@ -51,6 +51,7 @@ public class SetupInteractiveWallSystem : SystemBehaviour
                 lidarUIInputComponent.LidarInput2D.MinY = config.LidarInputMinY;
                 lidarUIInputComponent.LidarInput2D.MaxX = config.LidarInputMaxX;
                 lidarUIInputComponent.LidarInput2D.MaxY = config.LidarInputMaxY;
+                lidarUIInputComponent.LidarInput2D.MinDistance = config.LidarInputMinDistance;
                 lidarUIInputComponent.LidarInput2D.MaxDistance = config.LidarInputMaxDistance;
             }
         }).AddTo(this.Disposer);

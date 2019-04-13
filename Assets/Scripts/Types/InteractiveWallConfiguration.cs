@@ -27,6 +27,7 @@ public struct AreaConfiguration
     public float LidarInputMinY;
     public float LidarInputMaxX;
     public float LidarInputMaxY;
+    public float LidarInputMinDistance;
     public float LidarInputMaxDistance;
     public float VideoSwitchSpeed;
     public Vector2 VideoSize;
