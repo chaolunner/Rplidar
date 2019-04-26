@@ -6,6 +6,10 @@ using System;
 [Serializable]
 public class InteractiveWallConfiguration
 {
+    public bool CursorVisible;
+    public Vector2 Resolution;
+    public FullScreenMode FullScreenMode;
+    public int PreferredRefreshRate;
     [Reorderable]
     public List<AreaConfiguration> Areas = new List<AreaConfiguration>();
     [Reorderable]
@@ -23,6 +27,9 @@ public struct AreaConfiguration
     public int LidarPort;
     public Vector2 LidarPosition;
     public Vector3 LidarRotation;
+    public Vector2 LidarScale;
+    [Range(0, 1023)]
+    public int LidarMotorPWM;
     public float LidarInputMinX;
     public float LidarInputMinY;
     public float LidarInputMaxX;

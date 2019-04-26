@@ -478,6 +478,7 @@ MonoBehaviour:
   Host: 192.168.0.7
   Port: 20108
   ReceivedData: 
+  MotorPWM: 660
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,9 +1640,9 @@ MonoBehaviour:
   MaxDistance: 0.25
   XMultiplier: -1
   YMultiplier: -1
-  SmoothingSpeed: 0.05
   TrackedObjectPrefab: {fileID: 7389824166933419296, guid: f3d40d42d4b10b64593d22d3fffff199,
     type: 3}
+  BufferTime: 0.1
 --- !u!1 &426329119
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,6 +4152,7 @@ MonoBehaviour:
   Host: 192.168.0.8
   Port: 20108
   ReceivedData: 
+  MotorPWM: 660
 --- !u!1 &1168019912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,6 +4229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
+    CursorVisible: 0
+    Resolution: {x: 3840, y: 1080}
+    FullScreenMode: 0
+    PreferredRefreshRate: 60
     Areas:
     - EnableLidarMap: 1
       WallSize: {x: 5.53, y: 2.56}
@@ -4234,12 +4240,14 @@ MonoBehaviour:
       LidarPort: 20108
       LidarPosition: {x: 2.765, y: 1.28}
       LidarRotation: {x: 0, y: 0, z: 0}
+      LidarScale: {x: 0, y: 0}
+      LidarMotorPWM: 0
       LidarInputMinX: -2.765
       LidarInputMinY: -1.28
       LidarInputMaxX: 0
       LidarInputMaxY: 0
-      LidarInputMinDistance: 0.05
-      LidarInputMaxDistance: 0.25
+      LidarInputMinDistance: 0.08
+      LidarInputMaxDistance: 0.5
       VideoSwitchSpeed: 1
       VideoSize: {x: 4.1475, y: 1.28}
       VideoOffset: {x: 2.07375, y: 1.92}
@@ -4252,12 +4260,14 @@ MonoBehaviour:
       LidarPort: 20108
       LidarPosition: {x: 2.765, y: 1.28}
       LidarRotation: {x: 0, y: 0, z: 0}
+      LidarScale: {x: 0, y: 0}
+      LidarMotorPWM: 0
       LidarInputMinX: 0
       LidarInputMinY: -1.28
       LidarInputMaxX: 2.765
       LidarInputMaxY: 0
-      LidarInputMinDistance: 0.05
-      LidarInputMaxDistance: 0.25
+      LidarInputMinDistance: 0.08
+      LidarInputMaxDistance: 0.5
       VideoSwitchSpeed: 1
       VideoSize: {x: 4.1475, y: 1.28}
       VideoOffset: {x: 3.45625, y: 0.64}
@@ -4270,12 +4280,14 @@ MonoBehaviour:
       LidarPort: 20108
       LidarPosition: {x: 1.5, y: 1.28}
       LidarRotation: {x: 0, y: 0, z: 0}
+      LidarScale: {x: 0, y: 0}
+      LidarMotorPWM: 0
       LidarInputMinX: -1.5
       LidarInputMinY: -1.28
       LidarInputMaxX: 0
       LidarInputMaxY: 0
-      LidarInputMinDistance: 0.05
-      LidarInputMaxDistance: 0.25
+      LidarInputMinDistance: 0.08
+      LidarInputMaxDistance: 0.5
       VideoSwitchSpeed: 1
       VideoSize: {x: 2.25, y: 1.28}
       VideoOffset: {x: 1.125, y: 1.92}
@@ -4288,12 +4300,14 @@ MonoBehaviour:
       LidarPort: 20108
       LidarPosition: {x: 1.5, y: 1.28}
       LidarRotation: {x: 0, y: 0, z: 0}
+      LidarScale: {x: 0, y: 0}
+      LidarMotorPWM: 0
       LidarInputMinX: 0
       LidarInputMinY: -1.28
       LidarInputMaxX: 1.5
       LidarInputMaxY: 0
-      LidarInputMinDistance: 0.05
-      LidarInputMaxDistance: 0.25
+      LidarInputMinDistance: 0.08
+      LidarInputMaxDistance: 0.5
       VideoSwitchSpeed: 1
       VideoSize: {x: 2.25, y: 1.28}
       VideoOffset: {x: 1.875, y: 0.64}
@@ -5095,9 +5109,9 @@ MonoBehaviour:
   MaxDistance: 0.25
   XMultiplier: -1
   YMultiplier: -1
-  SmoothingSpeed: 0.05
   TrackedObjectPrefab: {fileID: 7389824166933419296, guid: f3d40d42d4b10b64593d22d3fffff199,
     type: 3}
+  BufferTime: 0.1
 --- !u!1 &1514834089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6568,9 +6582,9 @@ MonoBehaviour:
   MaxDistance: 0.25
   XMultiplier: -1
   YMultiplier: -1
-  SmoothingSpeed: 0.05
   TrackedObjectPrefab: {fileID: 7389824166933419296, guid: f3d40d42d4b10b64593d22d3fffff199,
     type: 3}
+  BufferTime: 0.1
 --- !u!1 &1817139178
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,6 +7536,6 @@ MonoBehaviour:
   MaxDistance: 0.25
   XMultiplier: -1
   YMultiplier: -1
-  SmoothingSpeed: 0.05
   TrackedObjectPrefab: {fileID: 7389824166933419296, guid: f3d40d42d4b10b64593d22d3fffff199,
     type: 3}
+  BufferTime: 0.1

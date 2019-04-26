@@ -28,15 +28,17 @@ public class LidarInput2D : MonoBehaviour
     public float XMultiplier = 1f;
     public float YMultiplier = 1f;
 
-    public float SmoothingSpeed = 0.05f;
-
     public GameObject TrackedObjectPrefab;
 
     private char[] delimiters = new char[] { '\n' };
 
+    public float BufferTime = 0.1f;
+    private float bufferedTime;
+    private List<Vector2> bufferPoints = new List<Vector2>();
+
     public delegate void PointerDownHandler(LidarInput2D input, GameObject go, Vector2 pos);
     public delegate void PointerUpHandler(LidarInput2D input, GameObject go, Vector2 pos);
-    public delegate void DragHandler(LidarInput2D input, GameObject go, Vector2 pos, Vector2 dis);
+    public delegate void DragHandler(LidarInput2D input, GameObject go, Vector2 pos, Vector2 dis, bool swipe);
 
     public event PointerDownHandler OnPointerDown;
     public event PointerUpHandler OnPointerUp;
@@ -91,16 +93,32 @@ public class LidarInput2D : MonoBehaviour
         // ... which is left-shifted at this point
         if (Points.Count == 0)
         {
-            for (var i = 0; i < TrackedObjects.Count; i++)
+            if (bufferedTime < BufferTime && bufferPoints.Count > 0)
             {
-                Destroy(TrackedObjects.ElementAt(i).Value);
+                Points = bufferPoints.ToList();
+                bufferedTime += Time.deltaTime;
             }
+            else
+            {
+                while (TrackedObjects.Count > 0)
+                {
+                    var kvp = TrackedObjects.ElementAt(0);
+                    Destroy(kvp.Value);
+                    OnPointerUp(this, kvp.Value, kvp.Key);
+                    TrackedObjects.Remove(kvp.Key);
+                }
 
-            TrackedObjects.Clear();
-            Blobs.Clear();
-            PreviousBlobs.Clear();
-            BlobTable.Clear();
-            return;
+                TrackedObjects.Clear();
+                Blobs.Clear();
+                PreviousBlobs.Clear();
+                BlobTable.Clear();
+                return;
+            }
+        }
+        else
+        {
+            bufferPoints = Points.ToList();
+            bufferedTime = 0;
         }
 
         Blobs.Clear();
@@ -186,16 +204,13 @@ public class LidarInput2D : MonoBehaviour
             if (isTracked && TrackedObjects.ContainsKey(previousBlob))
             {
                 var go = TrackedObjects[previousBlob].gameObject;
-                go.transform.position = Vector2.Lerp(go.transform.position, Blobs[i], SmoothingSpeed * Time.deltaTime);
+                go.transform.position = Blobs[i];
                 var trackedObject = go.GetComponent<TrackedObject>();
                 trackedObject.ID = i;
                 TrackedObjects.Remove(previousBlob);
                 TrackedObjects.Add(Blobs[i], go);
-                var distance = Blobs[i] - previousBlob;
-                if (distance.magnitude >= MinDistance)
-                {
-                    OnDrag(this, go, Blobs[i], distance);
-                }
+                var deltas = Blobs[i] - previousBlob;
+                OnDrag(this, go, Blobs[i], deltas, deltas.magnitude >= MinDistance);
             }
         }
 

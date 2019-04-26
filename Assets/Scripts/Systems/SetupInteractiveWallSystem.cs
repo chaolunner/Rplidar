@@ -34,6 +34,9 @@ public class SetupInteractiveWallSystem : SystemBehaviour
         Configuration = AppDataSystem.Load<InteractiveWallConfiguration>("InteractiveWallConfiguration");
 #endif
 
+        Cursor.visible = Configuration.CursorVisible;
+        Screen.SetResolution((int)Configuration.Resolution.x, (int)Configuration.Resolution.y, Configuration.FullScreenMode, Configuration.PreferredRefreshRate);
+
         lidarUIInputComponents.OnAdd().Subscribe(entity =>
         {
             var lidarUIInputComponent = entity.GetComponent<LidarUIInputComponent>();
@@ -47,6 +50,9 @@ public class SetupInteractiveWallSystem : SystemBehaviour
                 lidarUIInputComponent.LidarInput2D.IsDraw = config.EnableLidarMap;
                 lidarUIInputComponent.LidarInput2D.Client.Host = config.LidarHost;
                 lidarUIInputComponent.LidarInput2D.Client.Port = config.LidarPort;
+                lidarUIInputComponent.LidarInput2D.Client.MotorPWM = config.LidarMotorPWM;
+                lidarUIInputComponent.LidarInput2D.XMultiplier = config.LidarScale.x;
+                lidarUIInputComponent.LidarInput2D.YMultiplier = config.LidarScale.y;
                 lidarUIInputComponent.LidarInput2D.MinX = config.LidarInputMinX;
                 lidarUIInputComponent.LidarInput2D.MinY = config.LidarInputMinY;
                 lidarUIInputComponent.LidarInput2D.MaxX = config.LidarInputMaxX;

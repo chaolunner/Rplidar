@@ -106,17 +106,20 @@ public class LidarUIInputSystem : SystemBehaviour
         }
     }
 
-    private void OnDrag(LidarInput2D lidarInput2D, GameObject go, Vector2 pos, Vector2 dis)
+    private void OnDrag(LidarInput2D lidarInput2D, GameObject go, Vector2 pos, Vector2 dis, bool swipe)
     {
-        foreach (var input in lidarUIInputComponents.Entities.Select(e => e.GetComponent<LidarUIInputComponent>()).Where(input => input.LidarInput2D == lidarInput2D))
+        if (swipe)
         {
-            if (Mathf.Abs(dis.x) > Mathf.Abs(dis.y))
+            foreach (var input in lidarUIInputComponents.Entities.Select(e => e.GetComponent<LidarUIInputComponent>()).Where(input => input.LidarInput2D == lidarInput2D))
             {
-                EventSystem.Publish(new LidarSwipeEvent(input.ID, go, pos, new Vector2(dis.x / Mathf.Abs(dis.x), 0)));
-            }
-            else
-            {
-                EventSystem.Publish(new LidarSwipeEvent(input.ID, go, pos, new Vector2(0, dis.y / Mathf.Abs(dis.y))));
+                if (Mathf.Abs(dis.x) > Mathf.Abs(dis.y))
+                {
+                    EventSystem.Publish(new LidarSwipeEvent(input.ID, go, pos, new Vector2(dis.x / Mathf.Abs(dis.x), 0)));
+                }
+                else
+                {
+                    EventSystem.Publish(new LidarSwipeEvent(input.ID, go, pos, new Vector2(0, dis.y / Mathf.Abs(dis.y))));
+                }
             }
         }
     }

@@ -41,6 +41,8 @@ public class LidarClient : MonoBehaviour
     public string Host = "192.168.0.7";
     public int Port = 20108;
     public string ReceivedData = "";
+    [Range(0, 1023)]
+    public int MotorPWM = 660;
 
     private IPAddress ip;
     private IPEndPoint ipe;
@@ -100,6 +102,10 @@ public class LidarClient : MonoBehaviour
 
     private IEnumerator StartScan()
     {
+        while (!commandSocket.Connected)
+        {
+            yield return null;
+        }
         SendCommand(RPLIDAR_CMD_GET_INFO);
         yield return new WaitForSeconds(0.5f);
         SendCommand(RPLIDAR_CMD_GET_HEALTH);
@@ -119,7 +125,7 @@ public class LidarClient : MonoBehaviour
         {
             Output("Warning sensor status detected!. Error code: " + lastHealth.ErrorCode, LogType.Warning);
         }
-        SendCommand(RPLIDAR_CMD_SET_MOTOR_PWM, BitConverter.GetBytes(DEFAULT_MOTOR_PWM));
+        SendCommand(RPLIDAR_CMD_SET_MOTOR_PWM, BitConverter.GetBytes(MotorPWM));
         yield return new WaitForSeconds(0.5f);
         SendCommand(RPLIDAR_CMD_SCAN, null);
         Output("Start Scan");
@@ -137,7 +143,14 @@ public class LidarClient : MonoBehaviour
     {
         yield return StartCoroutine(StopScan());
         yield return new WaitForSeconds(1);
+#if UNITY_EDITOR
+        if (Application.isEditor)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+#else
         Application.Quit();
+#endif
     }
 
     public void LoadClient()
